@@ -18,6 +18,7 @@
  */
 
 #include "i2c_nfc_device.hpp"
+#include "version.hpp"
 #include "wifi.hpp"
 
 #include <unistd.h>
@@ -38,6 +39,8 @@ void print_usage();
 int main(int argc, const char* argv[])
 {
     using namespace xinfc;
+
+    std::cerr << "xinfc version " << XINFC_VERSION << std::endl;
 
     if (argc != 6)
     {
